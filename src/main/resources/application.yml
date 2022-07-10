@@ -27,3 +27,6 @@ eureka:
 
 greeting:
   message: "Hello taehyun nam this is E-commerce."
+logging:
+  level:
+    com.example.userservice: DEBUG

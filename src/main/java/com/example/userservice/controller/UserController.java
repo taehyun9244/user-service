@@ -37,7 +37,11 @@ public class UserController {
     //작동 체크
     @GetMapping("/health_check")
     public String status(){
-        return String.format("Working User Service on PORT %s", env.getProperty("local.server.port"));
+        return String.format("Working User Service s"
+                + ",port(local.server.port)=" + env.getProperty("local.server.port")
+                + ",port(server.port)=" + env.getProperty("server.port")
+                + ",port(token.secret)=" + env.getProperty("token.secret")
+                + ",port(token expiration time)=" + env.getProperty("token.expiration_time"));
     }
 
     //테스트
